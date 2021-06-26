@@ -1,23 +1,230 @@
 html 
     head
         title #{title}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+
+        style.
+            .navbar {
+                box-shadow: 0px 1px 10px 0px #e2dede;
+                height: 100px;
+
+            }
+            .logo {
+                color:#7fe5f0;
+                font-size:2em;
+                text-decoration:none;
+                font-weight:500;
+                margin-right:200px;
+            }
+            .logo:hover{
+                color:#7fe5f0;
+                font-size:2.2em;
+            }
+            .nav-link {
+                font-size:1.5em !important; 
+                color:#00b9c0 !important; 
+                font-weight:500 !important; 
+                margin-right:50px;
+            }
+            .active {
+                font-size:1.5em !important; 
+                color:#7fe5f0 !important; 
+                font-weight:500 !important; 
+                margin-right:50px;                
+            }
+
+
     body
 
-        nav.navbar.navbar-light.navbar-expand-lg.navbar-light.bg-light(style='box-shadow: 0px 1px 10px 0px #e2dede')
+        nav.navbar.navbar-light.navbar-expand-lg.navbar-light.bg-light
             div.container-fluid
-                a(href='#', style='color:#7fe5f0; font-size:2em; text-decoration:none; margin-right:200px; font-weight:500') TryExpress.com 
+                a.logo(href='#') TryExpress.com 
                     
                 div.collapse.navbar-collapse#navbarSupportedContent
                     ul.navbar-nav.me-auto.mb-2.mb-lg-0
                         li.nav-item     
-                            a.nav-link(href='/', style='font-size:1.5em; color:#00b9c0; font-weight:500; margin-right:50px') Home 
+                            a.nav-link.active(href='/') Home 
                         li.nav-item 
-                            a.nav-link.active(href='/services', style='font-size:1.5em; color:#7fe5f0; font-weight:500; margin-right:50px') Our Services 
+                            a.nav-link(href='/services') Our Services 
                         li.nav-item 
-                            a.nav-link(href='/contact', style='font-size:1.5em; color:#00b9cf; font-weight:500; margin-right:50px') Contact Us 
-                    form.d-flex(style='padding-top: 10px')
+                            a.nav-link(href='/contact') Contact Us 
+                    form.d-flex
                         input.form-control.me-2(type='search', placeholder='Search', aria-label="Search")
-                        button.btn(type='submit', style='background-color:#7fe5f0') Search
+                        button.btn.btn-info(type='submit',style='background-color:#7fe5f0') Search
+        
+        main
+            div#carouselMultiItemExample.carousel.slide.carousel-dark.text-center(data-mdb-ride="carousel")
+            
+                div.d-flex.justify-content-center.mb-4
+                    button.carousel-control-prev.position-relative(type="button",data-mdb-target="#carouselMultiItemExample",data-mdb-slide="prev")                    
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                        span.visually-hidden Previous
+                    
+                    button.carousel-control-next.position-relative(type="button",data-mdb-target="#carouselMultiItemExample",data-mdb-slide="next")                    
+                        span.carousel-control-next-icon(aria-hidden="true")
+                        span.visually-hidden Next                    
+                    
+                div.carousel-inner.py-4                
+                    div.carousel-item.active
+                        div.container
+                            div.row
+                                div.col-lg-4
+                                    div.card
+                                        img.card-img-top(src="https://mdbootstrap.com/img/new/standard/nature/181.jpg",alt="...")
+
+                                        div.card-body
+                                            h5.card-title Card title
+                                            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                                            a.btn.btn-primary(href="#!") Button
+                                            
+                                div.col-lg-4.d-none.d-lg-block
+                                    div.card
+                                        img.card-img-top(src="https://mdbootstrap.com/img/new/standard/nature/182.jpg",alt="...")
+                                        div.card-body
+                                            h5.card-title Card title
+                                            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                                            a.btn.btn-primary(href="#!") Button
+                            
+                                div.col-lg-4 d-none d-lg-block"
+                                    div.card
+                                        img.card-img-top(src="https://mdbootstrap.com/img/new/standard/nature/183.jpg",alt="...")
+                                        div.card-body
+                                            h5.card-title Card title
+                                            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+                                            a.btn.btn-primary(href="#!") Button
+                !-- Single item --
+                div.carousel-item"
+                div.container"
+                    div.row"
+                    div.col-lg-4 col-md-12"
+                        div.card"
+                        img
+                            src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+                        .card-img-top"
+                            alt="..."
+                        /
+                        div.card-body"
+                            h5.card-title"Card title/h5
+                            p.card-text"
+                            Some quick example text to build on the card title and make up the bulk
+                            of the card's content.
+                            /p
+                            a href="#!".btn btn-primary"Button/a
+                        
+                        
+                    
+
+                    div.col-lg-4 d-none d-lg-block"
+                        div.card"
+                        img
+                            src="https://mdbootstrap.com/img/new/standard/nature/185.jpg"
+                        .card-img-top"
+                            alt="..."
+                        /
+                        div.card-body"
+                            h5.card-title"Card title/h5
+                            p.card-text"
+                            Some quick example text to build on the card title and make up the bulk
+                            of the card's content.
+                            /p
+                            a href="#!".btn btn-primary"Button/a
+                        
+                        
+                    
+
+                    div.col-lg-4 d-none d-lg-block"
+                        div.card"
+                        img
+                            src="https://mdbootstrap.com/img/new/standard/nature/186.jpg"
+                        .card-img-top"
+                            alt="..."
+                        /
+                        div.card-body"
+                            h5.card-title"Card title/h5
+                            p.card-text"
+                            Some quick example text to build on the card title and make up the bulk
+                            of the card's content.
+                            /p
+                            a href="#!".btn btn-primary"Button/a
+                        
+                        
+                    
+                    
+                
+                
+
+                !-- Single item --
+                div.carousel-item"
+                div.container"
+                    div.row"
+                    div.col-lg-4 col-md-12 mb-4 mb-lg-0"
+                        div.card"
+                        img
+                            src="https://mdbootstrap.com/img/new/standard/nature/187.jpg"
+                        .card-img-top"
+                            alt="..."
+                        /
+                        div.card-body"
+                            h5.card-title"Card title/h5
+                            p.card-text"
+                            Some quick example text to build on the card title and make up the bulk
+                            of the card's content.
+                            /p
+                            a href="#!".btn btn-primary"Button/a
+                        
+                        
+                    
+
+                    div.col-lg-4 mb-4 mb-lg-0 d-none d-lg-block"
+                        div.card"
+                        img
+                            src="https://mdbootstrap.com/img/new/standard/nature/188.jpg"
+                        .card-img-top"
+                            alt="..."
+                        /
+                        div.card-body"
+                            h5.card-title"Card title/h5
+                            p.card-text"
+                            Some quick example text to build on the card title and make up the bulk
+                            of the card's content.
+                            /p
+                            a href="#!".btn btn-primary"Button/a
+                        
+                        
+                    
+
+                    div.col-lg-4 mb-4 mb-lg-0 d-none d-lg-block"
+                        div.card"
+                        img
+                            src="https://mdbootstrap.com/img/new/standard/nature/189.jpg"
+                        .card-img-top"
+                            alt="..."
+                        /
+                        div.card-body"
+                            h5.card-title"Card title/h5
+                            p.card-text"
+                            Some quick example text to build on the card title and make up the bulk
+                            of the card's content.
+                            /p
+                            a href="#!".btn btn-primary"Button/a
+                        
+                        
+                    
+                    
+                
+                
+            
+            !-- Inner --
+            
+            !-- Carousel wrapper --
+                        
+                            
+                        
+                        
+                    
+                    
+
+                    
+
         

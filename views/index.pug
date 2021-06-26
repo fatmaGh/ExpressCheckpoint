@@ -1,22 +1,84 @@
 html 
     head
         title #{title}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+        style.
+            .navbar {
+                box-shadow: 0px 1px 10px 0px #e2dede;
+                height:100px;
+
+            }
+            .logo {
+                color:#7fe5f0;
+                font-size:2em;
+                text-decoration:none;
+                font-weight:500;
+                margin-right:200px;
+            }
+            .logo:hover{
+                color:#7fe5f0;
+                font-size:2.2em;
+            }
+            .nav-link {
+                font-size:1.5em !important; 
+                color:#00b9c0 !important; 
+                font-weight:500 !important; 
+                margin-right:50px;
+            }
+            .active {
+                font-size:1.5em !important; 
+                color:#7fe5f0 !important; 
+                font-weight:500 !important; 
+                margin-right:50px;                
+            }
+            .form {
+                padding-top: 10px;
+            }
+            main {
+                display:flex;
+                justify-content:space-around;
+                margin:20px;
+            }
+            aside {
+                flex:20%;                
+                height:500px;
+                margin:0 5px;
+                padding:10px;
+            }
+            .search {
+                padding-top: 10px;
+            }
+
+
     body
 
-        nav.navbar.navbar-light.navbar-expand-lg.navbar-light.bg-light(style='box-shadow: 0px 1px 10px 0px #e2dede')
+        nav.navbar.navbar-light.navbar-expand-lg.navbar-light.bg-light
             div.container-fluid
-                a(href='#', style='color:#7fe5f0; font-size:2em; text-decoration:none; margin-right:200px; font-weight:500') TryExpress.com 
+                a.logo(href='#') TryExpress.com 
                     
                 div.collapse.navbar-collapse#navbarSupportedContent
                     ul.navbar-nav.me-auto.mb-2.mb-lg-0
                         li.nav-item     
-                            a.nav-link.active(href='/', style='font-size:1.5em; color:#7fe5f0; font-weight:500; margin-right:50px') Home 
+                            a.nav-link.active(href='/') Home 
                         li.nav-item 
-                            a.nav-link(href='/services', style='font-size:1.5em; color:#00b9cf; font-weight:500; margin-right:50px') Our Services 
+                            a.nav-link(href='/services') Our Services 
                         li.nav-item 
-                            a.nav-link(href='/contact', style='font-size:1.5em; color:#00b9cf; font-weight:500; margin-right:50px') Contact Us 
-                    form.d-flex(style='padding-top: 10px')
+                            a.nav-link(href='/contact') Contact Us 
+                    form.d-flex.form.search
                         input.form-control.me-2(type='search', placeholder='Search', aria-label="Search")
-                        button.btn(type='submit', style='background-color:#7fe5f0') Search
+                        button.btn.btn-info(type='submit',style='background-color:#7fe5f0') Search
+        
+        main
+            div.row
+                div.col-lg-4.col-md-12.mb-4.mb-lg-0
+                    img.w-100.shadow-1-strong.rounded.mb-4(src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",alt="")
+                    img.w-100.shadow-1-strong.rounded.mb-4(src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg",alt="")
+                
+                div.col-lg-4.mb-4.mb-lg-0
+                    img.w-100.shadow-1-strong.rounded.mb-4(src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",alt="")
+                    img.w-100.shadow-1-strong.rounded.mb-4(src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",alt="")
+                
+                div.col-lg-4.mb-4.mb-lg-0
+                    img.w-100.shadow-1-strong.rounded.mb-4(src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg",alt="")
+                    img.w-100.shadow-1-strong.rounded.mb-4(src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg",alt="")
