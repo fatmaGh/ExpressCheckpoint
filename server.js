@@ -11,7 +11,7 @@ const Logger = (req,res,next) =>
         console.log(day) 
         console.log(hour) 
         if (hour < 9 || hour > 16 || day > 5) {
-                res.render('error')
+                // res.render('error')
         }
                 next();
 }
