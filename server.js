@@ -10,8 +10,8 @@ const Logger = (req,res,next) =>
         let hour = date.getHours()
         console.log(day) 
         console.log(hour) 
-        if (hour < 9 || hour > 16 || day > 5) {
-                // res.render('error')
+        if (hour < 9 || hour > 16 || day > 5 || day < 1) {
+                res.render('error')
         }
                 next();
 }
